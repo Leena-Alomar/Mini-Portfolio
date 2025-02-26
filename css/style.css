@@ -191,14 +191,15 @@ i {
 }
 #re {
     text-align: center;
-    padding: 60px 30px;
+    padding: 60px 190px;
     margin: 5px  400px  100px 400px;
     margin-top: 2px;
-    font-size: 15px;
+    font-size: 17px;
     color: rgb(151, 75, 75);
     background: linear-gradient(rgb(255, 255, 255),rgb(245, 190, 200));
     border-radius: 30px;
     margin-bottom: 20px;
+   
     }
 
     #info{
@@ -244,6 +245,23 @@ i {
     }
 
 
+    #image {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: -157px  300px  320px 430px;
+        z-index: 1;
+        }
+         #icon{
+            margin-left: 15px;
+            color: rgb(209, 108, 108);
+
+
+
+         }
+
+
 
 
 
@@ -274,6 +292,14 @@ i {
         fill: #000000;
     }
    
+    #cv{
+        margin-top: -8000;
+        margin-bottom: 1000px;
+
+
+
+
+    }
         
 
 
