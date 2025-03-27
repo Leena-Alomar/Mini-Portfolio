@@ -129,7 +129,43 @@ button:active{
     text-align: center;
     margin-left: -20px;  
 }
-.li{
+#li1{
     text-align: center;
     margin-left: -1600px;
 }
+#li2{
+    text-align: center;
+    margin-left: -1600px;
+}
+
+.hover-underline {
+    font-size: 20px;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hover-underline::after,
+  .hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right,rgb(196, 102, 196),rgb(197, 37, 112));
+    bottom: 2px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+  }
+  
+  .hover-underline::before {
+    top: -5px;
+    transform-origin: left;
+  }
+  
+  .hover-underline:hover::after,
+  .hover-underline:hover::before {
+    transform: scaleX(1);
+  }
+  
