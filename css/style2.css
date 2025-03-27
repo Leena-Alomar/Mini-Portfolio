@@ -68,9 +68,9 @@ li a{
     font-family: 'Quicksand';
     font-weight: 500;
     background:
-    linear-gradient(217deg, rgb(182, 105, 182), rgb(255 0 0 / 0%) 70.71%),
+    linear-gradient(217deg, rgb(107, 19, 107), rgb(255 0 0 / 0%) 70.71%),
     linear-gradient(127deg,rgb(230, 38, 111), rgb(0 255 0 / 0%) 70.71%),
-    linear-gradient(336deg, rgba(255, 20, 118, 0.8), rgb(0 0 255 / 0%) 70.71%);
+    linear-gradient(336deg, rgba(255, 0, 98, 0.8), rgb(0 0 255 / 0%) 70.71%);
   }
   
   .card-back {
@@ -92,4 +92,8 @@ li a{
     padding: 10px 17px;
     font-family: 'Quicksand';
     font-size: 15px;
+}
+#link{
+    margin-top: 13px;
+    color: rgb(201, 74, 133);
 }
