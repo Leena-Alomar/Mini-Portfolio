@@ -17,10 +17,12 @@ body {
 
 #background {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Cellipse fill='none' stroke-width='52.6' stroke-opacity='0.9' id='a' rx='600' ry='450'/%3E%3C/defs%3E%3Cg transform='scale(0.379)' style='transform-origin:center'%3E%3Cg transform='rotate(180 0 0)' style='transform-origin:center'%3E%3Cg transform='rotate(-80 0 0)' style='transform-origin:center'%3E%3Cg transform='translate(1000 750)'%3E%3Cuse stroke='%2327002B' href='%23a' transform='rotate(-30 0 0) scale(0.7)'/%3E%3Cuse stroke='%232f0430' href='%23a' transform='rotate(-25 0 0) scale(0.75)'/%3E%3Cuse stroke='%23370636' href='%23a' transform='rotate(-20 0 0) scale(0.8)'/%3E%3Cuse stroke='%23400a3b' href='%23a' transform='rotate(-15 0 0) scale(0.85)'/%3E%3Cuse stroke='%23490e40' href='%23a' transform='rotate(-10 0 0) scale(0.9)'/%3E%3Cuse stroke='%23531145' href='%23a' transform='rotate(-5 0 0) scale(0.95)'/%3E%3Cuse stroke='%235c154a' href='%23a'/%3E%3Cuse stroke='%23661a4f' href='%23a' transform='rotate(5 0 0) scale(1.05)'/%3E%3Cuse stroke='%236f1e53' href='%23a' transform='rotate(10 0 0) scale(1.1)'/%3E%3Cuse stroke='%23792258' href='%23a' transform='rotate(15 0 0) scale(1.15)'/%3E%3Cuse stroke='%2383265c' href='%23a' transform='rotate(20 0 0) scale(1.2)'/%3E%3Cuse stroke='%238d2b60' href='%23a' transform='rotate(25 0 0) scale(1.25)'/%3E%3Cuse stroke='%23982f64' href='%23a' transform='rotate(30 0 0) scale(1.3)'/%3E%3Cuse stroke='%23a23468' href='%23a' transform='rotate(35 0 0) scale(1.35)'/%3E%3Cuse stroke='%23ac396c' href='%23a' transform='rotate(40 0 0) scale(1.4)'/%3E%3Cuse stroke='%23b63e6f' href='%23a' transform='rotate(45 0 0) scale(1.45)'/%3E%3Cuse stroke='%23c14372' href='%23a' transform='rotate(50 0 0) scale(1.5)'/%3E%3Cuse stroke='%23cb4875' href='%23a' transform='rotate(55 0 0) scale(1.55)'/%3E%3Cuse stroke='%23d64e78' href='%23a' transform='rotate(60 0 0) scale(1.6)'/%3E%3Cuse stroke='%23e0537b' href='%23a' transform='rotate(65 0 0) scale(1.65)'/%3E%3Cuse stroke='%23ea597d' href='%23a' transform='rotate(70 0 0) scale(1.7)'/%3E%3Cuse stroke='%23f55f80' href='%23a' transform='rotate(75 0 0) scale(1.75)'/%3E%3Cuse stroke='%23FF6582' href='%23a' transform='rotate(80 0 0) scale(1.8)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-position: 174% center;
-    background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: contain; /* This will make the background image fit within the div */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: auto; /* Ensure the div only takes as much width as needed */
+    height: auto; /* Ensure the div only takes as much height as needed */
+    padding: 20px; /* Optional padding for spacing */
 }
 
 
@@ -165,11 +167,11 @@ li a{
     position: relative;
     overflow: hidden;
     border-radius: 30px;
-    overflow: hidden;
-    z-index: -1;
-    margin-top:25px ;
+    z-index: 1; /* Set z-index to 1 */
+    margin-top: 25px;
     margin-left: 40px;
 }
+
 #par{
     color:rgb(110, 110, 110);
     font-size: 18px;
@@ -180,11 +182,11 @@ li a{
     font-family: sans-serif;
  
 }
-button{
-    z-index: 2;
+button {
+    z-index: 3; /* Increase z-index to be above the background */
     position: relative;
     text-align: center;
-    background: linear-gradient(to right,rgb(85, 36, 85),rgb(197, 37, 112));
+    background: linear-gradient(to right, rgb(85, 36, 85), rgb(197, 37, 112));
     border-radius: 16px;
     border: 0 solid;
     height: 33px;
@@ -194,6 +196,7 @@ button{
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     transition: transform 0.2s ease; 
 }
+
 button:active{
     transform: scale(0.96);
 }
@@ -205,9 +208,7 @@ button:active{
     background-image: linear-gradient(180deg, rgb(175, 122, 146), rgb(216, 33, 109));
     opacity: 0.4;
     animation: rotBGimg 2s linear infinite;
-    transition: all 10s linear;
-    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-
+    z-index: 0; /* Set z-index lower than the button */
 }
 
 @keyframes rotBGimg {
@@ -321,5 +322,5 @@ img{
 #css{
     margin-top: 70px;
      width: 120px;
-    height: 120px;
+    height: 95px;
 }
